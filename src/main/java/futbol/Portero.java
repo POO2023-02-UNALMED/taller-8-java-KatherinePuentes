@@ -20,7 +20,8 @@ public class Portero extends Futbolista{
         return String.format("%s con el dorsal %d. Le han marcado %d", texto1, dorsal, golesRecibidos);
     }
 
-    public int compareTo(Portero otroPortero){
+    public int compareTo(Object por){
+        Portero otroPortero= (Portero) por;
         int diferenciaGoles= this.golesRecibidos - otroPortero.golesRecibidos;
         return Math.abs(diferenciaGoles);
     }

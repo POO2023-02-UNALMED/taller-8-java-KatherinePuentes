@@ -9,8 +9,15 @@ public class Jugador extends Futbolista{
     }
 
     public Jugador(){
+        super();
         golesMarcados= 289;
         dorsal= 7;
+    }
+
+    @Override
+    public int compareTo(Jugador otroJugador){
+        int diferenciaEdad= this.getEdad() - otroJugador.getEdad();
+        return Math.abs(diferenciaEdad);
     }
 
     public String toString(){
@@ -19,9 +26,7 @@ public class Jugador extends Futbolista{
     }
 
     @Override
-    public int compareTo(Jugador otroJugador){
-        
+    public boolean jugarConLasManos(){
+        return false;
     }
-
-
 }

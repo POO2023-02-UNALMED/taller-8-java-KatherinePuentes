@@ -20,7 +20,6 @@ public class Portero extends Futbolista{
         return String.format("%s con el dorsal %d. Le han marcado %d", texto1, dorsal, golesRecibidos);
     }
 
-    @Override
     public int compareTo(Portero otroPortero){
         int diferenciaGoles= this.golesRecibidos - otroPortero.golesRecibidos;
         return Math.abs(diferenciaGoles);
